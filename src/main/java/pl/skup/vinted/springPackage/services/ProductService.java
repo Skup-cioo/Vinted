@@ -3,11 +3,11 @@ package pl.skup.vinted.springPackage.services;
 import io.restassured.response.Response;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import pl.skup.vinted.dataBase.ItemTable;
+import pl.skup.vinted.models.endpointContraints.ProductSort;
 import pl.skup.vinted.models.responsemodel.Item;
 import pl.skup.vinted.models.restAssuredSpec.BaseSpecification;
 import pl.skup.vinted.springPackage.repositories.ItemRepository;
@@ -15,6 +15,8 @@ import pl.skup.vinted.springPackage.repositories.ItemRepository;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
+
+import static pl.skup.vinted.models.restAssuredSpec.sendRequest.getWardrobe;
 
 @Service
 @AllArgsConstructor
@@ -24,7 +26,7 @@ public class ProductService {
 
     public static BaseSpecification baseSpecification = new BaseSpecification();
 
-    public ResponseEntity<?> getProductsOnStock(int page, int perPage, String order, Double minPrice, boolean showAll, String sortBy) {
+    public ResponseEntity<?> getProductsOnStock(int page, int perPage, String order, Double minPrice, boolean showAll, ProductSort sortBy) {
         if (Objects.isNull(LogInService.token)) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body("Bad Request: No Cookies.");
@@ -39,17 +41,8 @@ public class ProductService {
 
     }
 
-    private static Response getWardrobe(int page, int perPage, String order, BaseSpecification baseSpecification) {
-        return baseSpecification.getBaseReqSpec().basePath("/api/v2/wardrobe/91181425/items")
-                .queryParam("page", page)
-                .queryParam("per_page", perPage)
-                .queryParam("order", order)
-                .when()
-                .get();
-    }
-
     public ResponseEntity<?> getAllProductsOnStock() {
-        return getProductsOnStock(1, 900, "relevance", 0.0, false, "price,asc");
+        return getProductsOnStock(1, 900, "relevance", 0.0, false, ProductSort.PRICE_ASC);
     }
 
     public List<Item> getItemsThatCostMore(Double minPrice, Response response) {
@@ -80,9 +73,9 @@ public class ProductService {
         return ResponseEntity.ok("There was not anything to update");
     }
 
-    private List<Item> sortItems(List<Item> items, String sortBy) {
-        String[] sortParams = sortBy.split(",");
-        String sortField = sortParams[0]; // np. "price"
+    private List<Item> sortItems(List<Item> items, ProductSort sortBy) {
+        String[] sortParams = sortBy.getValue().split(",");
+        String sortField = sortParams[0];
         boolean isDescending = sortParams.length > 1 && "desc".equalsIgnoreCase(sortParams[1]);
 
         Comparator<Item> comparator;

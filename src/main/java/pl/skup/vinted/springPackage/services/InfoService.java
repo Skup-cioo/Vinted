@@ -7,6 +7,6 @@ import org.springframework.stereotype.Service;
 @AllArgsConstructor
 public class InfoService {
     public void getBasicInfo() {
-        
+
     }
 }

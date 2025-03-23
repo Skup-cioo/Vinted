@@ -6,7 +6,9 @@ import io.restassured.specification.RequestSpecification;
 
 import static pl.skup.vinted.models.restAssuredSpec.headers.baseHeaders.BASE_HEADERS;
 
+
 public class BaseSpecification {
+
     public RequestSpecification getBaseReqSpec() {
         return RestAssured.given()
                 .baseUri("https://www.vinted.pl")

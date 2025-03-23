@@ -11,7 +11,7 @@ public class LogInService {
 
     public static String token;
 
-    public ResponseEntity<String>  logInToVinted(TokenRequest tokenRequest) {
+    public ResponseEntity<String> logInToVinted(TokenRequest tokenRequest) {
         token = tokenRequest.cookie;
         return ResponseEntity.ok("Poprawnie zapisano cookiesa");
     }
