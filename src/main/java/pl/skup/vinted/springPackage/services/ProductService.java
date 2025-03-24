@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import pl.skup.vinted.dataBase.ItemTable;
 import pl.skup.vinted.models.endpointContraints.ProductSort;
-import pl.skup.vinted.models.responsemodel.Item;
+import pl.skup.vinted.models.vintedresponsemodel.Item;
 import pl.skup.vinted.models.restAssuredSpec.BaseSpecification;
 import pl.skup.vinted.springPackage.repositories.ItemRepository;
 
