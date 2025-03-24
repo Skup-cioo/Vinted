@@ -28,7 +28,13 @@ public class Orders {
                                        @RequestParam(defaultValue = "50") int perPage,
                                        @RequestParam(defaultValue = "completed") String status,
                                        @RequestParam(defaultValue = "sell") String type,
-                                       @RequestParam(required = false, defaultValue = "date_desc") OrdersSort sortBy) {
+                                       @RequestParam(required = false) OrdersSort sortBy) {
         return ordersService.getAllSoldOrders(page, perPage, status, type, sortBy);
+    }
+
+    @Operation(summary = "Pobieramy liste miesiecy i kwote jaka udalo nam sie zarobic")
+    @GetMapping(path = "/all/months")
+    ResponseEntity<?> getAllSoldOrdersLastWeek() {
+        return ordersService.calculateSums();
     }
 }

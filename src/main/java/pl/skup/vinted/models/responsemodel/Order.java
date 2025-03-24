@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 
+import java.time.OffsetDateTime;
+
 @Data
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -28,5 +30,9 @@ public class Order {
 
     public String getDate() {
         return date;
+    }
+
+    public OffsetDateTime getParsedDate() {
+        return OffsetDateTime.parse(date);
     }
 }
