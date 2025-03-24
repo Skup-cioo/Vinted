@@ -1,4 +1,4 @@
-package pl.skup.vinted.models.responsemodel;
+package pl.skup.vinted.models.vintedresponsemodel;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
