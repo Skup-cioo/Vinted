@@ -8,9 +8,7 @@ import org.springframework.stereotype.Service;
 import pl.skup.vinted.models.endpointContraints.OrdersSort;
 import pl.skup.vinted.models.responsemodel.Order;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static pl.skup.vinted.models.restAssuredSpec.sendRequest.getAllSold;
@@ -24,8 +22,7 @@ public class OrdersService {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body("Bad Request: No Cookies.");
         } else {
-            Response response = getAllSold(page, perPage, status, type, baseSpecification);
-            List<Order> completedOrders = response.jsonPath().getList("my_orders", Order.class);
+            List<Order> completedOrders = getAllOrders(page, perPage, status, type);
 
             return ResponseEntity.ok(sortOrders(completedOrders, sortBy));
         }
@@ -50,5 +47,31 @@ public class OrdersService {
         } else {
             return orders.stream().sorted(dateComparator).collect(Collectors.toList());
         }
+    }
+
+
+    public ResponseEntity<?> calculateSums() {
+        List<Order> orders = getAllOrders(1, 5000, "completed", "sell");
+
+        Map<String, Double> monthlySums = orders.stream()
+                .collect(Collectors.groupingBy(
+                        order -> order.getParsedDate().getYear() + "-" + order.getParsedDate().getMonthValue(),
+                        Collectors.summingDouble(order -> Double.parseDouble(order.getPrice().getAmount()))
+                )).entrySet()
+                .stream()
+                .sorted((e1, e2) -> e2.getKey().compareTo(e1.getKey()))
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (oldValue, newValue) -> oldValue,
+                        LinkedHashMap::new
+                ));
+        return ResponseEntity.ok(monthlySums);
+    }
+
+    private static List<Order> getAllOrders(int page, int perPage, String status, String type) {
+        Response response = getAllSold(page, perPage, status, type, baseSpecification);
+        List<Order> completedOrders = response.jsonPath().getList("my_orders", Order.class);
+        return completedOrders;
     }
 }
