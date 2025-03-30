@@ -1,5 +1,6 @@
 package pl.skup.vinted.springPackage.services;
 
+import com.fasterxml.jackson.databind.ser.Serializers;
 import io.restassured.response.Response;
 import lombok.AllArgsConstructor;
 import org.apache.poi.ss.usermodel.*;
@@ -10,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import pl.skup.vinted.models.dto.MonthDetailsDTO;
 import pl.skup.vinted.models.endpointContraints.OrdersSort;
+import pl.skup.vinted.models.restAssuredSpec.BaseSpecification;
 import pl.skup.vinted.models.vintedresponsemodel.Order;
 
 import java.io.ByteArrayOutputStream;
@@ -18,13 +20,14 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import static pl.skup.vinted.models.restAssuredSpec.sendRequest.getAllSold;
-import static pl.skup.vinted.springPackage.services.ProductService.baseSpecification;
+//import static pl.skup.vinted.springPackage.services.ProductService.baseSpecification;
 
 @Service
 @AllArgsConstructor
 public class OrdersService {
     private static List<Order> orders;
 
+        public static BaseSpecification baseSpecification = new BaseSpecification();
     public ResponseEntity<?> getAllSoldOrders(int page, int perPage, String status, String type, OrdersSort sortBy) {
         if (Objects.isNull(LogInService.token)) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)

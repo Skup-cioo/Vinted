@@ -77,7 +77,6 @@ public class ProductService {
         }
     }
 
-    boolean isUpdated;
 
     public ResponseEntity<?> updateDbToVinted() {
         List<ItemTable> tab = itemRepository.findAll();
@@ -87,11 +86,7 @@ public class ProductService {
         allItemsFromVinted.stream().filter(item -> !titleFromDb.contains(item.getTitle()))
                 .forEach(item -> {
                     itemRepository.save(new ItemTable(item.getTitle(), "TAK", "BRAK", item.getPrice()));
-                    isUpdated = true;
                 });
-        if (isUpdated) {
-            return ResponseEntity.ok("DB updated");
-        }
         return ResponseEntity.ok("There was not anything to update");
     }
 

@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root       # Tylko ta zmienna potrzebna do konfiguracji root
+      MYSQL_DATABASE: buty            # Tworzy bazę danych "buty"
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  app:
+    build: .
+    container_name: vinted_app
+    restart: always
+    depends_on:
+      - mysql
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/buty
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    command: ./wait-for-it.sh mysql:3306 -- java -jar app.jar
+    ports:
+      - "8080:8080"
+
+volumes:
+  mysql_data:

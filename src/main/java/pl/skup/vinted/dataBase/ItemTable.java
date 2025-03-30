@@ -7,7 +7,6 @@ import lombok.*;
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "buty")
 public class ItemTable {
