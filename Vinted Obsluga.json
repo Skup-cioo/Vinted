@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "0f88a226-13ac-4613-9efd-df129db9e278",
+		"name": "Vinted Obsluga",
+		"description": "Kolekcja stworzona aby sprawdzać zachowanie aplikacji do wyciągania statystyk z Vinted.\n\nSwagger dostępny [http://localhost:8080/swagger-ui/index.html#/](http://localhost:8080/swagger-ui/index.html#/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22736509"
+	},
+	"item": [
+		{
+			"name": "Zapisanie Tokenu",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cookie\": \"v_udt=VGljY2xXbll0RTZFV05xMmh4QzdXMitsSXE4di0tdHBwcmhMTzhTOUNITExJZy0tRkpHZU55SlVMaE02ZGFKYmtseVhwdz09; anonymous-locale=pl-fr; OptanonAlertBoxClosed=2025-01-02T17:10:17.193Z; eupubconsent-v2=CQKmdlgQKmdlgAcABBENBWFsAP_gAAAAAChQJxNX_G__bXlj8X71aftkeY1f9_h7rsQxBhfJk-4FyLvW_JwX32EzNA36pqYKmRIAu3TBIQNlGIDURUCgaogVryDMaEyUoTNKJ6BkiFMRc2cYCFxvm4lDeQCY5vr991d52R-t7dr83dzyy4xHv3a5_2S1WJCdA58tDfv9bROb-9IOd_x8v4v4_FgAAAAAABAAAAAAAAAAAAAAAAAAABcAAABQSCEAAgABcAFAAVAA4AB4AEEAMgA1AB4AEQAJgAVQA3gB6AD8AISAQwBEgCOAEsAJoAVoAw4BlAGWANkAd8A9gD4gH2AfoBAACKQEXARgAjQBQQCoAFXALmAYoA0QBtADcAHEAQ6AkQBOwChwFHgKRAU2AtgBcgC7wF5gMNAZIAycBlwDOYGsAayA2MBt4DdQHBAOTAcuA8cB7QEIQIXhADoADgASADnAIOAT8BHoCRQErAJtAU-AsIBeQDEAGLQMhAyMBowDUwG0ANuAboA8oB8gD9wICAQMggiCCYEGAIVgQuHAMAAEQAOAA8AC4AJAAfgBoAHOAO4AgEBBwEIAJ-AVAAvQB0gEIAI9ASKAlYBMQCZQE2gKQAUmArsBagC6AGIAMWAZCAyYBowDTQGpgNeAbQA2wBtwDj4HOgc-A8oB8QD7YH7AfuBA8CCIEGAINgQrHQSwAFwAUABUADgAIAAXQAyADUAHgARAAmABVgC4ALoAYgA3gB6AD9AIYAiQBLACaAFGAK0AYYAygBogDZAHeAPaAfYB-gD_gIoAjABQQCrgFiALmAXkAxQBtADcAHEAOoAh0BF4CRAEyAJ2AUOAo-BTQFNgKsAWKAtgBcAC5AF2gLvAXmAvoBhoDHgGSAMnAZVAywDLgGcgNVAawA28BuoDiwHJgOXAeOA9oB9YEAQIWkACYACAA0ADnALEAj0BNoCkwF5ANTAbYA24Bz4DygHxAP2AgeBBgCDYEKyEB0ABYAFAAXABVAC4AGIAN4AegBHADvAH-ARQAlIBQQCrgFzAMUAbQA6kCmgKbAWKAtEBcAC5AGTgM5AaqA8cCFpKBEAAgABYAFAAOAA8ACIAEwAKoAXAAxQCGAIkARwAowBWgDZAHeAPwAq4BigDqAIdAReAkQBR4CxQFsALzAZOAywBnIDWAG3gPaAgeSAHgAXAHcAQAAqACPQEigJWATaApMBiwDcgHlAP3AgiBBgpA4AAXABQAFQAOAAggBkAGgAPAAiABMACkAFUAMQAfoBDAESAKMAVoAygBogDZAHfAPsA_QCLAEYAKCAVcAuYBeQDFAG0ANwAh0BF4CRAE7AKHAU2AsUBbAC4AFyALtAXmAvoBhoDJAGTwMsAy4BnMDWANZAbeA3UBwQDkwHjgPaAhCBC0oAhAAuACQARwA5wB3AEAAJEAWIA14B2wD_gI9ASKAmIBNoCkAFPgK7AXQAvIBiwDJgGpgNeAeUA-KB-wH7gQMAgeBBMCDAEGwIVgAAA.f_wAAAAAAAAA; OTAdditionalConsentString=1~43.46.55.61.70.83.89.93.108.117.122.124.135.143.144.147.149.159.192.196.211.228.230.239.259.266.286.291.311.318.320.322.323.327.367.371.385.394.397.407.415.424.430.436.445.486.491.494.495.522.523.540.550.559.560.568.574.576.584.587.591.737.802.803.820.821.839.864.899.904.922.931.938.979.981.985.1003.1027.1031.1040.1046.1051.1053.1067.1092.1095.1097.1099.1107.1135.1143.1149.1152.1162.1166.1186.1188.1205.1215.1226.1227.1230.1252.1268.1270.1276.1284.1290.1301.1307.1312.1345.1356.1375.1403.1415.1416.1421.1423.1440.1449.1455.1495.1512.1516.1525.1540.1548.1555.1558.1570.1577.1579.1583.1584.1591.1603.1616.1638.1651.1653.1659.1667.1677.1678.1682.1697.1699.1703.1712.1716.1721.1725.1732.1745.1750.1765.1782.1786.1800.1810.1825.1827.1832.1838.1840.1842.1843.1845.1859.1866.1870.1878.1880.1889.1899.1917.1929.1942.1944.1962.1963.1964.1967.1968.1969.1978.1985.1987.2003.2008.2027.2035.2039.2047.2052.2056.2064.2068.2072.2074.2088.2090.2103.2107.2109.2115.2124.2130.2133.2135.2137.2140.2147.2150.2156.2166.2177.2186.2205.2213.2216.2219.2220.2222.2225.2234.2253.2279.2282.2292.2305.2309.2312.2316.2322.2325.2328.2331.2335.2336.2337.2343.2354.2358.2359.2370.2376.2377.2387.2400.2403.2405.2407.2411.2414.2416.2418.2425.2440.2447.2461.2465.2468.2472.2477.2481.2484.2486.2488.2493.2498.2501.2510.2517.2526.2527.2532.2535.2542.2552.2563.2564.2567.2568.2569.2571.2572.2575.2577.2583.2584.2596.2604.2605.2608.2609.2610.2612.2614.2621.2628.2629.2633.2636.2642.2643.2645.2646.2650.2651.2652.2656.2657.2658.2660.2661.2669.2670.2677.2681.2684.2687.2690.2695.2698.2713.2714.2729.2739.2767.2768.2770.2772.2784.2787.2791.2792.2798.2801.2805.2812.2813.2816.2817.2821.2822.2827.2830.2831.2834.2838.2839.2844.2846.2849.2850.2852.2854.2860.2862.2863.2865.2867.2869.2873.2874.2875.2876.2878.2880.2881.2882.2883.2884.2886.2887.2888.2889.2891.2893.2894.2895.2897.2898.2900.2901.2908.2909.2916.2917.2918.2919.2920.2922.2923.2927.2929.2930.2931.2940.2941.2947.2949.2950.2956.2958.2961.2963.2964.2965.2966.2968.2973.2975.2979.2980.2981.2983.2985.2986.2987.2994.2995.2997.2999.3000.3002.3003.3005.3008.3009.3010.3012.3016.3017.3018.3019.3025.3028.3034.3038.3043.3052.3053.3055.3058.3059.3063.3066.3068.3070.3073.3074.3075.3076.3077.3089.3090.3093.3094.3095.3097.3099.3100.3106.3109.3112.3117.3119.3126.3127.3128.3130.3135.3136.3145.3150.3151.3154.3155.3163.3167.3172.3173.3182.3183.3184.3185.3187.3188.3189.3190.3194.3196.3209.3210.3211.3214.3215.3217.3219.3222.3223.3225.3226.3227.3228.3230.3231.3234.3235.3236.3237.3238.3240.3244.3245.3250.3251.3253.3257.3260.3270.3272.3281.3288.3290.3292.3293.3296.3299.3300.3306.3307.3309.3314.3315.3316.3318.3324.3328.3330.3331.3531.3731.3831.4131.4531.4631.4731.4831.5231.6931.7235.7831.7931.8931.9731.10231.10631.10831.11031.11531.12831.13632.13731.14237.14332.15731.16831.16931.21233.23031.25131.25731.25931.26031.26831.27731.27831.28031.28731.28831.29631.31631.32531.33631.34231.34631.36831.39131.39531; _gcl_au=1.1.1101415225.1735837818; _ga=GA1.1.1095623187.1735837818; _fbp=fb.1.1735837817840.4061030732043944; _tt_enable_cookie=1; _ttp=rjcFsGPyXH0K68Tu-t_VkJOw9Tw.tt.1; _cc_id=f6c6d194d1fbd920a104fe0ea424bde1; cto_bundle=pwEsQl8xcUEwZzgzcTZuOHYwbEc0RXJkWHo3Wm1wdkJub2h2WUx4N0xscm55YXFpaTFEaEJsSEFFQjMyT2hMYkFoc0olMkZmSjdtVVAyQzc4cW9zZmZ5M0ZDUGdTJTJCNDlqTWpGaUY5YWdOdTdOQkhyQU1Mb001ejl5a2Z1UFlWYVhOclhxb1FQMEMlMkY2OHB4SllSdVElMkJFdG12MEdtUSUzRCUzRA; G_ENABLED_IDPS=google; last_user_id=1; domain_selected=true; _uetvid=def8b7b0297311efac0bb52a43a67aa5; _ga_762HZ9XYEN=deleted; seller_header_visits=6; anon_id=a2d5e856-b353-42ab-be19-5eea5f39b930; v_uid=91181425; v_sid=d5a0ea66-1742133410; anon_id=a2d5e856-b353-42ab-be19-5eea5f39b930; _fbc=fb.1.1742225978330.IwY2xjawJFIYVleHRuA2FlbQIxMAABHSVXf5H7VvlMbiDLdFavxppzxgJhUyAOwZBkUlcx6l380MP4YcBo_i2stg_aem_98LtSiUgA7F8Ph30fA36rw; __cf_bm=gf3QDMBEMjUY.xpimQEyGZGojVZFIEdkv40rxm.uhf8-1742805306-1.0.1.1-leokqBq9B2MOnSGxPUzr1Y4v.nb8heYo63REmSEMoBo5qFl_stZm1e97Gl9tGiSjjx7yWIkHN4qMiqyoyVFmU3W_XnIU2DFXskqnGApQhhirKRHUgzgqEjzXziDg1RV4; cf_clearance=pDETEMZXuU1CjpgCNwXqXEdsQ9Vi9ThjNGI6IvPvc6Y-1742805307-1.2.1.1-qg856m3b.i.dS6mty4DNFy5ir2As44HJqhDOiKJ4D0Y62hlvLl8CY8ZbPMiHyF36oXA9nSLnpj7v9kOctiDBPpOcRrEuJmn1WoDwd.gzlwRl72YGLU6jEULGM1Fjd9V.4OASykCot6iXDNzLSS7.ygq23tf_k2r6yjOwQ6bd_ztUhOFkOFIj1TY_Hp2ofazhdpUT8o4qv4DALXbx95UwVDl5AyL9PM54pGC6k_Xh4hJ1WoS8ZpzB2jNTtzNq3jxvZVpPMX9rxAp79sAVktzNuQagwlyVeCGvhIbXeU9LSR2ItLubLSPC1kTc4amTRNPIWf5qfsYWLGUx5bDDHulBqkOzPXqUFVAtis8r1Jonl.g; access_token_web=eyJraWQiOiJFNTdZZHJ1SHBsQWp1MmNObzFEb3JIM2oyN0J1NS1zX09QNVB3UGlobjVNIiwiYWxnIjoiUFMyNTYifQ.eyJhcHBfaWQiOjQsImNsaWVudF9pZCI6IndlYiIsImF1ZCI6ImZyLmNvcmUuYXBpIiwiaXNzIjoidmludGVkLWlhbS1zZXJ2aWNlIiwic3ViIjoiOTExODE0MjUiLCJpYXQiOjE3NDI4MDUzMDgsInNpZCI6ImQ1YTBlYTY2LTE3NDIxMzM0MTAiLCJzY29wZSI6InVzZXIiLCJleHAiOjE3NDI4MTI1MDgsInB1cnBvc2UiOiJhY2Nlc3MiLCJsb2dpbl90eXBlIjozLCJhY3QiOnsic3ViIjoiOTExODE0MjUifSwiYWNjb3VudF9pZCI6NjU0ODg2ODB9.wGe66yiH-nAzvhMs_OdjSu1wt0zQPm_4Uwn0ZenLA0CCx1R2ESIn8ubpw1qwaA7NkQnQKm5xfUpqgYw-ebDdEoscW9PmfzJeEUvIgNQI5eqJUCADXTLhd4WTOjgMUScqtn5PCf3wspthztzYqBCuTORPVMgI6PFsQ2ICv4Qop_lJ0Y9h2Ys2P4M5d4EBdYCftup8Y1IgkX0YpmM2Zboq6c6MDzxSKJMPY6JnCrXvHKTNb4boLntm9-MIeZ2U71LZgTAyrm4R7l3ZrRlzsgDMqDD8sfuO4Aam-D1H2xP50LzRSyk2slcdHR8JYXO2kLk5o951pDLIBMqNukAYhaAa5Q; refresh_token_web=eyJraWQiOiJFNTdZZHJ1SHBsQWp1MmNObzFEb3JIM2oyN0J1NS1zX09QNVB3UGlobjVNIiwiYWxnIjoiUFMyNTYifQ.eyJhcHBfaWQiOjQsImNsaWVudF9pZCI6IndlYiIsImF1ZCI6ImZyLmNvcmUuYXBpIiwiaXNzIjoidmludGVkLWlhbS1zZXJ2aWNlIiwic3ViIjoiOTExODE0MjUiLCJpYXQiOjE3NDI4MDUzMDgsInNpZCI6ImQ1YTBlYTY2LTE3NDIxMzM0MTAiLCJzY29wZSI6InVzZXIiLCJleHAiOjE3NDM0MTAxMDgsInB1cnBvc2UiOiJyZWZyZXNoIiwibG9naW5fdHlwZSI6MywiYWN0Ijp7InN1YiI6IjkxMTgxNDI1In0sImFjY291bnRfaWQiOjY1NDg4NjgwfQ.0F9iNrVpXX-gAXZ2MdCrcXhgE1I73zWlnT7dEOFWwGQw3bZCQI54OFIWnt4n00zCrCETXa-nJ18yRBfmhdCMhV5NMjIlxk_H0oE_Nij7fyFzB9nWKwRrEnpjKw-xfLfeNOLnrFsrDvL2PaLawq3pTwSqaJt3cUxz3Y40k6jOBCb3Ro1I1BOjB3nSm3o3Dtve9_ewS442HNyR0v-W0IFsRb5622Q_mX3vdEENoxWQd_pBHoiDoG21e9OXJx1IMbuHcQ0MyihI8_1oN2sB3IDVEW3lsrM7dGqZaxr5098eFwsRB3_24Z_nxnEM1HXojtC1NYaD2QZCUv7aV3JoJgeuWw; __gads=ID=cc438ee9d9fe0dab:T=1735837816:RT=1742805312:S=ALNI_MbS_U2lg0XLY5jwIAu7A1B58YvTaw; __gpi=UID=00000f9039be9fd5:T=1735837816:RT=1742805312:S=ALNI_MZg4PRtlKUwnxJIAjFB31KPFKUr4w; __eoi=ID=20d777207a1fa3bf:T=1735837816:RT=1742805312:S=AA-AfjYcxGvgLiIn6CZ0CPC5UiOK; cto_bundle=1aW3iV9qZWlqWkhKcTJ0QjJrdFY4TGx4VGlqUkJJZHlFMVhIaTVYaHclMkJwZEJuOFV6NWowUXBVYXFqMnEyMUt2S3pQZWxKSjhxVjZnTUJtMTZQZUxnQndROU9YWWczaVd4SlhaNVVlRlpKMjZ6R2gzWUtaOVNDZzh0NXRSbmFvOVNPRVlEQjhzT3R5cTkzeWw2OEM1c09XOEc2ZyUzRCUzRA; cto_bundle=1aW3iV9qZWlqWkhKcTJ0QjJrdFY4TGx4VGlqUkJJZHlFMVhIaTVYaHclMkJwZEJuOFV6NWowUXBVYXFqMnEyMUt2S3pQZWxKSjhxVjZnTUJtMTZQZUxnQndROU9YWWczaVd4SlhaNVVlRlpKMjZ6R2gzWUtaOVNDZzh0NXRSbmFvOVNPRVlEQjhzT3R5cTkzeWw2OEM1c09XOEc2ZyUzRCUzRA; viewport_size=998; _ga_ZJHK1N3D75=GS1.1.1742805311.32.1.1742805330.0.0.0; _vinted_fr_session=VTZuVWl1M1F5MS83bFRlWTdsM3A5RjQvUEQxZ2ZURm9hRjM2T0NLMjEzbVhJZWxJWExGbFJYN3pla2JSSXhOblFaK244SnBCYU1ZSm1VZ3QwbjVrdGNobWR2NmlxMVRoNHM0STZubW9LczV2V1lHNkZvVk1GVXdsR3VVMk1wcGtiazFDMmZDZENhdHVvZjFjam9PcVY2ME0yUVV3QlJiNjBwSEo0SE9FMnd4S0JZT0ZFd3IrRzh6dzAwSWVPditCSmFLUzNnSnAzSXlOdVMrTzB6RUhYeEZWZU15bE83RW5NUm42cjdxelZzRUlDVFVMTU9wcDV6VVQrbGN6ZWVCVS9saVltTWxvQXZYYVVHVkh3YjRlUWxjK2xBdzIyZjI3VkN1dkxQQTdWTXRYejdBZlByVmdiNDFtN2JDajFCUVp3U2pXcGdCUU5sYit6TGs3eG9QSjdPdStPTW9ROEJEL0l0QjhCblJOT3BBYjRRblNhSWE0TVpYU3VEM0xJZWRMaVJVRi9rWGs2ckRSYm1yQ1VSR0Q4UTFEZFJ2dFJ0akFOaG9McjdJdXpIcURURUYrK0c2UjJwb2h2Q2ZWQzRWbkFiN0xvbFBZeEFjQ2FKSWVBeWIxcW9pREVvdUVaeDMrZWZRN0Z1aG5JdnBuUFk5S0swcDZEbHFoQlAzeXlYN3Z0cFR2cjczYzZQMWREY1JFdnBTSDk0RktGa0hVT1lqSWNXM2hYZGtCK3d1MnAyeDRGVjlVV3h3eVFScWR6OWYzdXFvVzZJUGVrMEhHVjlQSVFVYzBkK0tkOEFyRkZGQmlaVXFjeXVVSW5CVlcxcFJsd0ttVUlyRmFMQTRRbkR0Yk1UTTg4TWlBdWYvdWFweDZRRldmbEVKejlzV2dlc2FEY0FrM1pjeENEVXN6a2U2dmErOVRuTXJsMis1SmNZMUdOZWprcUpxWDdQUC9YSStWeU9qVFlLU0ZGTXROQ1RsNnRLZSs5RC9YRGp0ckVvYlZFcCtIR1FJVjdadW9PQkxtVjdwWjFzTFV0c1BpYnppRXhRUkVLOWFla1BlRFM1UG5MaHlCbkZWejdJZkJ6bm1pOGJqKzZCVmdsY202c1BwNHVhTVI4MWptc2xvMkZKNlh5L09DY29MWmtBc0R4REdOdjhYRTBOOXJZKytmZHMwYm1POExyZWNnQ0UraG5BRDJ1eGlnTnhVaWxpSThURlJoSms1RmhtSGF4M0FSbXJtVEh5V0hOWEF2MkwxZExIRFk2cUl2VWMwcUlMUzBRNTB5NmExMlJGa29mbnVZWnlWanZlb0EreWJYeXFXQndSSlR6bCtiVEs0bE9iN3VlanREQVF4Uk1IMTJKdUw2ZThpVG5Ydis4T3JMOSt4V3pIRnNEQ1FldHB3YXdnNnc0TFptM0VRcTJEdCtka3dpdWI5cDNGWDhWTmVZOURjdzVIRGxldkxBVkY2R2dZZ1JLWGt1VGxuVUxuRTFWaGV1WS8rQmxlNytGWnFoZElhc1pDRmtpWThDdXkzTE9kT3hsRk4yNmh3blRHZGxUbk95QmJNbkR4UG93bnhPZWRHakwyYzdZNHlhOGlzTy8rK0I5dGZNbGdYbEVpUWMwbllaTitBVnJNMVNUamNiYVNVYVk5NmdzWmNzdngxWDhDalhEd2lqdjRHVXFRZXp2SVE0NUJoNGZ5YURGTGc1LzdXVVdHTnBiRVorb3YrWVI4dEN2SzNBOTN0bFFOckRjMFc0cm5landDbWVLL0trTVRENnNJQ1hHMjZiZGdUSy9Vc3RqSklUUnRJNm4yWFB2Tm5HYnlPTnIxbEFMQUh6ZWNCdTd3R1dqbHczQXBZeVhyUmNJaEVrRVQvdW5QeFpZRFJxSXRnK0I3aEN2MkxuekFneFdhN1RscSswdUFtdDlLb2VoUFZZeDdlRlJmTFhFMkh4ZGxtY242NUZXUEdBZkxFL2J0ODA2RENYMWFnMzVlQ2pidnZNNWMxSklMVTdHQzViUXo2WURURGJNSTdra1JZUFZCcmF4T2VLQ2twWW9acko3U09aUWRKRGp4Qk1rSnJLc3dEdlo3RGt1WWVTVlRoeElvaWpRNWZsTTVqZlZBdE9TbUxXSzZ4MktFcFVlbnZYZTJZY0ptUFFXU2RnZ2Z2bithcmwxUW9xQmZVZXZqU1dwQXNDTGhGankvRnFFV0IrRmVzMUhRQXpGYkppbldOWGdkSjJCT2pLbDlXT05WTHpqOGMvemJyb0t1Q1E3V1RNL0cycUM2QTluY3ROV1MzVXRYVmtDZDBwQ0lvajZINVAzdEJvajN1bXJaU2RFRlZlQWdHUlQ1L0RjMEFLZEFHVWVkTGQvU0sycFQzbXJRQkY4VWZTQ29NVGdFMWMycVo1VFlWYzhOMHNSck1hdDBKQnJiSDBySFNqbWd4MmgzT2VKU0pzRTRjbVJFYXVwS2F5WkpCalhlN05KSVFmL0xsMU1VVFVydkNrbTBmUmZHcm1uTG1BTEZxZVBTRFhxWGpMTGY0dGcwci9QU25KeDZSd0V5eklYdG1ObVFjMHNGbkxzbk52WWs2ZHVZQXVZY2VTRG9Yb1NPUDJoN29Lc0ZGL25QN0ZlZGFZdmY4eS9lRjJDcG42c0hDYU0xdmF1OE5DWVBnRmxGRHFTWDNpUWJYckxsMGZCWXEyTEh0S3VTZUxMSExPUGJVK2RXdnM4Zk53OTYxdkZqbDdKSjEvMHpWRkNJVi8tLXhXL0hpMTBXREE2dDk2bng2M3g4OGc9PQ%3D%3D--fb15f7fb07eff8b10e639fb500bf4791156292e5; _ga_762HZ9XYEN=GS1.1.1742805311.32.1.1742805331.0.0.0; OptanonConsent=isGpcEnabled=0&datestamp=Mon+Mar+24+2025+09%3A35%3A31+GMT%2B0100+(czas+%C5%9Brodkowoeuropejski+standardowy)&version=202312.1.0&browserGpcFlag=0&isIABGlobal=false&consentId=91181425&interactionCount=52&hosts=&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0003%3A1%2CC0004%3A1%2CC0005%3A1%2CV2STACK42%3A1%2CC0015%3A1%2CC0035%3A1&genVendors=V2%3A1%2CV1%3A1%2C&geolocation=PL%3B14&AwaitingReconsent=false; datadome=8P3NKcrF6fjiMPtJFXuPQB5yp3Ky4GxYyYSi865CE01c8rtZPBFE2rEKkuyPXdbqE6KO6mnK6U~fpWSj3Z2BXqaaw8BAaNl~DzglsrtGpIrF3azDSUbCzQAbUzlmaOBO; _dd_s=rum=0&expire=1742806233678\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cookie/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookie",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Bazy Danych",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/all Wszystkie dostepne",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders/ Wszystkie sprzedane",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/all?page=1&perPage=50&status=completed&type=sell&sortBy=DATE_ASC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"all"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "perPage",
+							"value": "50"
+						},
+						{
+							"key": "status",
+							"value": "completed"
+						},
+						{
+							"key": "type",
+							"value": "sell"
+						},
+						{
+							"key": "sortBy",
+							"value": "DATE_ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders/ Podliczenie pod msc",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/all/months",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"all",
+						"months"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders/ Detale Konkretny msc",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/all/months",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"all",
+						"months"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EXCEL all",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/all/months/excel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"all",
+						"months",
+						"excel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EXCEL Month Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/months/2025-01/excel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"months",
+						"2025-01",
+						"excel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EXCEL all stock",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/products/all/excel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"all",
+						"excel"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
