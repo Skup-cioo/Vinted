@@ -1,6 +1,5 @@
 package pl.skup.vinted.models.dto;
 
-import lombok.Data;
 import pl.skup.vinted.models.vintedresponsemodel.Order;
 
 import java.util.List;

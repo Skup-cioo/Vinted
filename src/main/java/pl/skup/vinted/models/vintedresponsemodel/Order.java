@@ -32,6 +32,10 @@ public class Order {
         return date;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     public OffsetDateTime getParsedDate() {
         return OffsetDateTime.parse(date);
     }

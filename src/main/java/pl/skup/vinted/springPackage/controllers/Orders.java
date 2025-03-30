@@ -36,10 +36,23 @@ public class Orders {
         return ordersService.calculateSums();
     }
 
+    @Operation(summary = "Pobieramy liste miesiecy i kwote jaka udalo nam sie zarobic -> jako Excel")
+    @GetMapping(path = "/all/months/excel", produces = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+    ResponseEntity<byte[]> getExcelFile() {
+        return ordersService.getMonthlySummeryAsExcel();
+    }
+
     @Operation(summary = "Detale dla konkretnego miesiace",
             description = "Zwracamy totalną sprzedaż, za ile średnio sprzedawalismy oraz liste orderów w danym miesiącu")
     @GetMapping(path = "/months/{month}", produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<?> getMonthsDetails(@PathVariable String month) {
         return ordersService.getMonthsDetails(month);
+    }
+
+    @Operation(summary = "Detale dla konkretnego miesiace -> jako Excel",
+            description = "uzupelnienie endpointu /months/{month}")
+    @GetMapping(path = "/months/{month}/excel", produces = MediaType.APPLICATION_JSON_VALUE)
+    ResponseEntity<?> getMonthsDetailsExcel(@PathVariable String month) {
+        return ordersService.getMonthlyDetailsAsExcel(month);
     }
 }
