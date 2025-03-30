@@ -38,6 +38,14 @@ public class Products {
         return productService.getAllProductsOnStock();
     }
 
+    @Operation(summary = "Pobieramy liste wszystkich produktów Vinted -> jako Excel",
+            description = "Zwracamy liste wszystkich produktów")
+    @GetMapping(path = "/all/excel")
+    ResponseEntity<?> getAllProductsOnStockExcel() {
+        return productService.getProductsOnStockExcel();
+    }
+
+
     @Operation(summary = "Porównuje itemy z vinted i te która są zapisane na bazie, jeżeli w DB nie ma jakiegoś wyrównuje stan")
     @PostMapping(path = "/db")
     ResponseEntity<?> getAllItemsFromDB() {
